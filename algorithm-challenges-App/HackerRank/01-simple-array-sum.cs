@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace algorithm_challenges_App.HackerRank
 {
-    public class Solution
+    public class Solution_1
     {
         /*
          * Complete the simpleArraySum function below.
