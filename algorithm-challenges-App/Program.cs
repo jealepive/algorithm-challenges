@@ -3,11 +3,19 @@ using algorithm_challenges_App.HackerRank;
 
 namespace algorithm_challenges_App
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Solution.simpleArraySum(new int[] { 1, 2, 3 });
+            Action<int> print = (number) =>
+            {
+                Console.WriteLine($"El resultado es : {number}");
+                Console.ReadLine();
+            };
+
+            int resultado = Solution_1.simpleArraySum(new int[] { 1, 2, 3 });
+
+            print(resultado);
         }
     }
 }
