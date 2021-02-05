@@ -1,19 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace algorithm_challenges_App.HackerRank
 {
-    public class Solution_1
+    public class _01_simple_array_sum
     {
         /*
          * Complete the simpleArraySum function below.
          */
+
         public static int simpleArraySum(int[] ar)
         {
             return ar.Sum();
         }
-
     }
 }

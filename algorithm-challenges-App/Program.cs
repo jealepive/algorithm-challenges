@@ -1,5 +1,7 @@
-﻿using System;
-using algorithm_challenges_App.HackerRank;
+﻿using algorithm_challenges_App.HackerRank;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace algorithm_challenges_App
 {
@@ -7,15 +9,28 @@ namespace algorithm_challenges_App
     {
         private static void Main(string[] args)
         {
-            Action<int> print = (number) =>
+            int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<List<int>> arr = new List<List<int>>();
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"El resultado es : {number}");
-                Console.ReadLine();
-            };
+                arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
+            }
 
-            int resultado = Solution_1.simpleArraySum(new int[] { 1, 2, 3 });
+            int result = _03_diagonal_difference.diagonalDifference(arr);
 
-            print(resultado);
+            print(result);
         }
+
+        public static Action<int> print = (number) =>
+         {
+             Console.WriteLine($"El resultado es : {number}");
+             Console.ReadLine();
+         };
+
+        //int resultado = Solution_1.simpleArraySum(new int[] { 1, 2, 3 });
+
+        //print(resultado);
     }
 }
