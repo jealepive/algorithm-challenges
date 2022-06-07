@@ -1,6 +1,4 @@
-﻿using LeetCode.Problems;
-
-namespace LeetCode.Tests
+﻿namespace LeetCode.Tests
 {
     public class _001_TwoSum_Tests
     {

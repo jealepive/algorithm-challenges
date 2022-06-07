@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using FluentAssertions;
-using LeetCode.Common;
-using LeetCode.Problems;
 
 namespace LeetCode.Tests
 {
