@@ -8,11 +8,8 @@
         [InlineData(new[] { 3, 3 }, 6, new[] { 0, 1 })]
         public void TwoSum_Examples(int[] input, int target, int[] output)
         {
-            // Arrange
-            var testObj = new _001_TwoSum();
-
             // Act
-            var result = testObj.TwoSum(input, target);
+            var result = _001_TwoSum.TwoSum(input, target);
 
             // Assert
             Assert.Equal(output, result);

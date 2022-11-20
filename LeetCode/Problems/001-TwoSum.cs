@@ -12,7 +12,7 @@
 
     public class _001_TwoSum
     {
-        public int[] TwoSum(int[] nums, int target)
+        public static int[] TwoSum(int[] nums, int target)
         {
             for (var i = 0; i < nums.Length; i++)
             {

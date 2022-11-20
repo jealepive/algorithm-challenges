@@ -16,11 +16,8 @@
         [InlineData("nfpdmpi", 5)]
         public void LengthOfLongestSubstring_Examples(string input, int output)
         {
-            // Arrange
-            var testObj = new _003_LengthOfLongestSubstring();
-
             // Act
-            var result = testObj.LengthOfLongestSubstring(input);
+            var result = _003_LengthOfLongestSubstring.LengthOfLongestSubstring(input);
 
             // Assert
             Assert.Equal(output, result);

@@ -2,7 +2,7 @@
 {
     public class _003_LengthOfLongestSubstring
     {
-        public int LengthOfLongestSubstring(string s)
+        public static int LengthOfLongestSubstring(string s)
         {
             if (string.IsNullOrEmpty(s))
             {
@@ -14,7 +14,7 @@
                 return 1;
             }
 
-            for (int i = 0; i < s.Length; i++)
+            for (var i = 0; i < s.Length; i++)
             {
                 if (s[i] != s[0])
                 {
@@ -32,7 +32,7 @@
             var currentSubString = new List<char>();
             var lastDuplicatedElementIndex = 0;
 
-            for (int i = 0; i < s.Length; i++)
+            for (var i = 0; i < s.Length; i++)
             {
                 if (!currentSubString.Contains(s[i]) && i != lastElementIndex)
                 {

@@ -17,21 +17,17 @@ namespace LeetCode.Problems
 
     public class _002_AddTwoNumbers
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             var output = new ListNode();
             var currentNode1 = l1;
             var currentNode2 = l2;
             var currentOutput = output;
             var overflowCount = 0;
-            var nodeSum = 0;
-            var hasOverflow = false;
-
             while (currentNode1 is not null && currentNode2 is not null)
             {
-                nodeSum = currentNode1.val + currentNode2.val + overflowCount;
-                hasOverflow = nodeSum > 9;
-
+                var nodeSum = currentNode1.val + currentNode2.val + overflowCount;
+                var hasOverflow = nodeSum > 9;
                 if (hasOverflow)
                 {
                     currentOutput.val = nodeSum - 10;
@@ -45,14 +41,9 @@ namespace LeetCode.Problems
                 currentNode1 = currentNode1.next;
                 currentNode2 = currentNode2.next;
 
-                if (currentNode2 is not null || currentNode1 is not null || (currentNode1 is null && currentNode2 is null && hasOverflow))
-                {
-                    currentOutput.next = new ListNode(overflowCount);
-                }
-                else
-                {
-                    currentOutput.next = null;
-                }
+                currentOutput.next = currentNode2 is not null || currentNode1 is not null || (currentNode1 is null && currentNode2 is null && hasOverflow)
+                    ? new ListNode(overflowCount)
+                    : null;
                 currentOutput = currentOutput.next;
 
                 if (currentNode1 is null && currentNode2 is not null)

@@ -9,14 +9,11 @@ namespace LeetCode.Tests
         [ClassData(typeof(_002_AddTwoNumbers_Data))]
         public void TwoSum_Examples(ListNode l1, ListNode l2, ListNode output)
         {
-            // Arrange
-            var testObj = new _002_AddTwoNumbers();
-
             // Act
-            var result = testObj.AddTwoNumbers(l1, l2);
+            var result = _002_AddTwoNumbers.AddTwoNumbers(l1, l2);
 
             // Assert
-            result.Should().BeEquivalentTo(output);
+            _ = result.Should().BeEquivalentTo(output);
         }
     }
 
@@ -43,6 +40,9 @@ namespace LeetCode.Tests
             };
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
