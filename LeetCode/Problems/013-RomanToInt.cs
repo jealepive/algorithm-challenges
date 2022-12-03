@@ -36,16 +36,14 @@ public class _013_RomanToInt
         {'D', 500 },
         {'M', 1000},
     };
+
     public static int RomanToInt(string s)
     {
         var output = 0;
         var valueTosubstract = 0;
         for (var i = 0; i < s.Length; i++)
         {
-            if (!RomanNumbersLookup.TryGetValue(s[i], out var currentDecimalNumber))
-            {
-                return 0;
-            }
+            var currentDecimalNumber = RomanNumbersLookup.GetValueOrDefault(s[i]);
 
             if (i + 1 == s.Length)
             {
@@ -58,7 +56,6 @@ public class _013_RomanToInt
                 valueTosubstract = currentDecimalNumber;
                 continue;
             }
-
 
             output += currentDecimalNumber - valueTosubstract;
             valueTosubstract = 0;
