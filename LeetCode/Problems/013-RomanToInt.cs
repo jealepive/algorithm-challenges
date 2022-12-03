@@ -40,25 +40,25 @@ public class _013_RomanToInt
     public static int RomanToInt(string s)
     {
         var output = 0;
-        var valueTosubstract = 0;
+        var valueToSubstract = 0;
         for (var i = 0; i < s.Length; i++)
         {
             var currentDecimalNumber = RomanNumbersLookup.GetValueOrDefault(s[i]);
 
             if (i + 1 == s.Length)
             {
-                output += currentDecimalNumber - valueTosubstract;
+                output += currentDecimalNumber - valueToSubstract;
                 break;
             }
 
             if (currentDecimalNumber < RomanNumbersLookup.GetValueOrDefault(s[i + 1]))
             {
-                valueTosubstract = currentDecimalNumber;
+                valueToSubstract = currentDecimalNumber;
                 continue;
             }
 
-            output += currentDecimalNumber - valueTosubstract;
-            valueTosubstract = 0;
+            output += currentDecimalNumber - valueToSubstract;
+            valueToSubstract = 0;
         }
 
         return output;
