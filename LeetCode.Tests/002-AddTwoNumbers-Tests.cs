@@ -7,13 +7,13 @@ namespace LeetCode.Tests
     {
         [Theory]
         [ClassData(typeof(_002_AddTwoNumbers_Data))]
-        public void TwoSum_Examples(ListNode l1, ListNode l2, ListNode output)
+        public void TwoSum_Examples(ListNode l1, ListNode l2, ListNode expected)
         {
             // Act
-            var result = _002_AddTwoNumbers.AddTwoNumbers(l1, l2);
+            var actualResult = _002_AddTwoNumbers.AddTwoNumbers(l1, l2);
 
             // Assert
-            _ = result.Should().BeEquivalentTo(output);
+            _ = actualResult.Should().BeEquivalentTo(expected);
         }
     }
 

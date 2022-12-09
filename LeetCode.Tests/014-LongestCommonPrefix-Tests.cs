@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Tests
+﻿using FluentAssertions;
+
+namespace LeetCode.Tests
 {
     public class _014_LongestCommonPrefix_Tests
     {
@@ -13,7 +15,7 @@
             var actualResult = _014_LongestCommonPrefix.LongestCommonPrefix(input);
 
             // Assert
-            Assert.Equal(expected, actualResult);
+            _ = actualResult.Should().Be(expected);
         }
     }
 }

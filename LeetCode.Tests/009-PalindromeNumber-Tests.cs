@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Tests
+﻿using FluentAssertions;
+
+namespace LeetCode.Tests
 {
     public class _009_PalindromeNumber_Tests
     {
@@ -7,13 +9,13 @@
         [InlineData(-121, false)]
         [InlineData(10, false)]
 
-        public void PalindromeNumber_Examples(int input, bool output)
+        public void PalindromeNumber_Examples(int input, bool expected)
         {
             // Act
-            var result = _009_PalindromeNumber.IsPalindrome(input);
+            var actualResult = _009_PalindromeNumber.IsPalindrome(input);
 
             // Assert
-            Assert.Equal(output, result);
+            _ = actualResult.Should().Be(expected);
         }
     }
 }

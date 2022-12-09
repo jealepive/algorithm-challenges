@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Tests
+﻿using FluentAssertions;
+
+namespace LeetCode.Tests
 {
     public class _003_LengthOfLongestSubstring_Tests
     {
@@ -14,13 +16,13 @@
         [InlineData("anviaj", 5)]
         [InlineData("asljlj", 4)]
         [InlineData("nfpdmpi", 5)]
-        public void LengthOfLongestSubstring_Examples(string input, int output)
+        public void LengthOfLongestSubstring_Examples(string input, int expected)
         {
             // Act
-            var result = _003_LengthOfLongestSubstring.LengthOfLongestSubstring(input);
+            var actualResult = _003_LengthOfLongestSubstring.LengthOfLongestSubstring(input);
 
             // Assert
-            Assert.Equal(output, result);
+            _ = actualResult.Should().Be(expected);
         }
     }
 }

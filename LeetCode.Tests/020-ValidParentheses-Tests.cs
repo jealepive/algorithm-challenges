@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Tests;
+﻿using FluentAssertions;
+
+namespace LeetCode.Tests;
 
 public class _020_ValidParentheses_Tests
 {
@@ -14,9 +16,9 @@ public class _020_ValidParentheses_Tests
     public void ValidParentheses_Examples(string input, bool expected)
     {
         // Act
-        var actual = _020_ValidParentheses.IsValid(input);
+        var actualResult = _020_ValidParentheses.IsValid(input);
 
         // Assert
-        Assert.Equal(expected, actual);
+        _ = actualResult.Should().Be(expected);
     }
 }
