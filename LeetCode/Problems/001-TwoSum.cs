@@ -5,11 +5,11 @@
  *   You may assume that each input would have exactly one solution, and you may not use the same element twice.
  *   You can return the answer in any order.
  *
- *   Time Complexity: O(n^2)
- *   Space Complexity: O(1)
- *   Runtime: 288 ms
- *   Memory Usage: 42.9 MB
- *   Submission: https://leetcode.com/submissions/detail/711763489/
+ *   Time Complexity: O(n)
+ *   Space Complexity: O(n)
+ *   Runtime: 154 ms
+ *   Memory Usage: 44.7 MB
+ *   Submission: https://leetcode.com/problems/two-sum/submissions/864043430/
 */
 
 public class _001_TwoSum
