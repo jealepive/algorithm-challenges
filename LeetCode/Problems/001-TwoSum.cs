@@ -16,15 +16,16 @@ public class _001_TwoSum
 {
     public static int[] TwoSum(int[] nums, int target)
     {
-        for (var i = 0; i < nums.Length; i++)
+        var map = new Dictionary<int, int>();
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            for (var j = 0; j < nums.Length; j++)
+            if (map.TryGetValue(target - nums[i], out var complementIndex))
             {
-                if (nums[i] + nums[j] == target && i != j)
-                {
-                    return new[] { i, j };
-                }
+                return new[] { complementIndex, i };
             }
+
+            map.TryAdd(nums[i], i);
         }
 
         return new[] { 0, 0 };
