@@ -5,6 +5,8 @@
  *   You may assume that each input would have exactly one solution, and you may not use the same element twice.
  *   You can return the answer in any order.
  *
+ *   Time Complexity: O(n^2)
+ *   Space Complexity: O(1)
  *   Runtime: 288 ms
  *   Memory Usage: 42.9 MB
  *   Submission: https://leetcode.com/submissions/detail/711763489/
